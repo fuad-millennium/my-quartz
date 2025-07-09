@@ -2,7 +2,7 @@ name: Deploy Quartz to GitHub Pages
 
 on:
   push:
-    branches: [v4] # Your main branch
+    branches: [v4] # or main, depending on your branch
 
 jobs:
   build:
@@ -12,10 +12,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: Setup Node.js 22
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Install dependencies
         run: npm install
